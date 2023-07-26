@@ -1,4 +1,4 @@
-# Projeto de automação de E2E [Bootcamp Dual Experience em Cypress]<br><br>
+# Projeto de automação de E2E <br> [Bootcamp Dual Experience em Cypress]<br><br>
 Esse projeto é a criação da automação em cypress para o desenvolvimento do E2E web.<br>
 Usando a Aplicação Health Experience desenvolvida para o curso.<br>
 
