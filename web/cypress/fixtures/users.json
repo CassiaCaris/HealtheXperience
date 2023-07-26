@@ -12,10 +12,17 @@
     "email": "test@healthxp.com",
     "password": "12345678"
   },
-  "inv_email": {
-    "email": "test@healthxp",
-    "password": "12345678"
-  },
+  "inv_emails": [
+    { "email": "test@healthxp", "password": "12345678" },
+    { "email": "test&healthxp.com", "password": "12345678" },
+    { "email": "www.healthxp.com", "password": "12345678" },
+    { "email": "1234567890", "password": "12345678" },
+    { "email": "QAxperience", "password": "12345678" },
+    { "email": "123QA456", "password": "12345678" },
+    { "email": "admin*healthxp.com", "password": "12345678" },
+    { "email": "&^*%#*&^*%#*&^*%#*", "password": "12345678" },
+    { "email": "     @test.com", "password": "12345678" }
+  ],
   "empty_email": {
     "email": "",
     "password": "12345678"

@@ -2,24 +2,38 @@
 
 class LoginPage {
 
-    submit(user) {
+    go() {
         cy.visit('http://localhost:3000')
+    }
 
+    fill(user) {
         if (user.email) {
-            cy.get('#email').type(user.email)
+            cy.get('#email').clear().type(user.email)
         }
-    
+
         if (user.password) {
-            cy.get('#password').type(user.password)
+            cy.get('#password').clear().type(user.password)
         }
-    
+    }
+
+    submit() {
         cy.contains('button', 'Entrar').click()
     }
 
-    popUpHave(text){
+    doLogin(user) {
+        this.go()
+        this.fill(user)
+        this.submit()
+    }
+
+    popUpHave(text) {
         cy.get('#swal2-content')
-        .should('be.visible')
-        .should('have.text', text)
+            .should('be.visible')
+            .should('have.text', text)
+    }
+
+    popUpBack() {
+        cy.get('.swal2-cancel').click()
     }
 
 }

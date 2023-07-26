@@ -1,6 +1,7 @@
 # [Bootcamp Dual Experience]<br> 
 ## Projeto de automação de E2E Web em Cypress <br><br> 
 Esse projeto é a criação da automação em cypress para o desenvolvimento do E2E web.<br>
+Usamos a formatação de Page Objects (PO) <br>
 Usando a Aplicação Health Experience desenvolvida para o curso.<br>
 
 Componentes necessários para executar o projeto<br>
