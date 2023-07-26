@@ -1,30 +1,51 @@
+import login from '../support/pages/LoginPage'
+import users from '../fixtures/users.json'
+
 describe('login', () => {
 
     it('deve logar com um perfil do admin', () => {
 
-        //Dado que eu tenho um usuário admin cadastrado
+        const user = users.admin
+        
+        login.submit(user)
+    
+        cy.contains('aside .logged-user', 'Olá, ' + user.name).should('be.visible')
 
-        const user = {
-            email: 'admin@healthxp.com',
-            password: 'xperience'
-        }
+    })
 
-        //Quando faço login no gestor de academias
+    it('não deve logar com senha incorreta', () => {
+        const user = users.inv_pass
 
-        cy.visit('http://localhost:3000')
+        login.submit(user)
+        login.popUpHave('Suas credenciais são inválidas, por favor tente novamente!')
+    })
 
-        //outra opção de preenchimento
-        //cy.get('input[name=email]').type(user.email)
-        //cy.get('input[name=password]').type(user.password)
+    it('não deve logar com email não cadastrado', () => {
+        const user = users.email_not_found
 
-        cy.get('#email').type(user.email)
-        cy.get('#password').type(user.password)
+        login.submit(user)
+        login.popUpHave('Suas credenciais são inválidas, por favor tente novamente!')
+    })
 
-        cy.contains('button', 'Entrar').click()
+    it('não deve logar com email incorreto', () => {
+        const user = users.inv_email
 
-        //Então devo ver o dashboard
-        cy.contains('aside .logged-user','Olá, Admin').should('be.visible')
+        login.submit(user)
+        login.popUpHave('Insira um email válido.')
+    })
 
+    it('não deve logar com email em branco', () => {
+        const user = users.empty_email
+
+        login.submit(user)
+        login.popUpHave('Os campos email e senha são obrigatórios.')
+    })
+
+    it('não deve logar com senha em branco', () => {
+        const user = users.empty_pass
+
+        login.submit(user)
+        login.popUpHave('Os campos email e senha são obrigatórios.')
     })
 
 })

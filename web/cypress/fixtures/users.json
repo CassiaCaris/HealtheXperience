@@ -1,0 +1,27 @@
+{
+  "admin": {
+    "name": "Admin",
+    "email": "admin@healthxp.com",
+    "password": "xperience"
+  },
+  "inv_pass": {
+    "email": "admin@healthxp.com",
+    "password": "12345678"
+  },
+  "email_not_found": {
+    "email": "test@healthxp.com",
+    "password": "12345678"
+  },
+  "inv_email": {
+    "email": "test@healthxp",
+    "password": "12345678"
+  },
+  "empty_email": {
+    "email": "",
+    "password": "12345678"
+  },
+  "empty_pass": {
+    "email": "test@healthxp.com",
+    "password": ""
+  }
+}

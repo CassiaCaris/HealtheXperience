@@ -1,4 +1,5 @@
-# Projeto de automação de E2E <br> [Bootcamp Dual Experience em Cypress]<br><br>
+# [Bootcamp Dual Experience]<br> 
+## Projeto de automação de E2E Web em Cypress <br><br> 
 Esse projeto é a criação da automação em cypress para o desenvolvimento do E2E web.<br>
 Usando a Aplicação Health Experience desenvolvida para o curso.<br>
 
@@ -6,7 +7,7 @@ Componentes necessários para executar o projeto<br>
 Nodejs (Versão 16.16)<br>
 cypress (verão 12.17.1)<br>
 
-## Informações para execução do Projeto<br>
+### Informações para execução do Projeto<br>
 
 **Clonar o projeto**<br>
 $ git clone https://github.com/CassiaCaris/HealtheXperience.git <br><br>
