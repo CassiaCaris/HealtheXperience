@@ -21,7 +21,8 @@
     { "email": "123QA456", "password": "12345678" },
     { "email": "admin*healthxp.com", "password": "12345678" },
     { "email": "&^*%#*&^*%#*&^*%#*", "password": "12345678" },
-    { "email": "     @test.com", "password": "12345678" }
+    { "email": "     @test.com", "password": "12345678" },
+    { "email": "test@gmail,com", "password": "12345678" }
   ],
   "empty_email": {
     "email": "",

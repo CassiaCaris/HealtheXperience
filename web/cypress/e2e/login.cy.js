@@ -1,16 +1,16 @@
+import dash from '../support/pages/DashPage'
 import login from '../support/pages/LoginPage'
 import users from '../fixtures/users.json'
 
 describe('login', () => {
 
-    it('deve logar com um perfil do admin', () => {
+    it.only('deve logar com um perfil do admin', () => {
 
         const user = users.admin
 
         login.doLogin(user)
-
-        cy.contains('aside .logged-user', 'Olá, ' + user.name).should('be.visible')
-
+        dash.userLogedIn(user.name)
+        
     })
 
     it('não deve logar com senha incorreta', () => {
@@ -30,14 +30,27 @@ describe('login', () => {
     it('não deve logar com emails incorretos', () => {
         const emails = users.inv_emails
 
+        let outputMessages = []
+        let expectedMessages = []
+
         login.go()
         //realizaçao do teste de uma lista de massa
         emails.forEach((u) => {
             login.fill(u)
             login.submit()
-            login.popUpHave('Insira um email válido.')
+            //login.popUpHave('Insira um email válido.')
+
+            login.popUp().invoke('text').then((t)=> {
+                cy.log(t)
+                outputMessages.push(t)
+                expectedMessages.push('Insira um email válido.')
+            })
+
             login.popUpBack()
         })
+
+        cy.wrap(outputMessages).should('deep.equal', expectedMessages)
+
     })
 
     it('não deve logar com email em branco', () => {

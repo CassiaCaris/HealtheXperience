@@ -24,3 +24,14 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import dash from '../support/pages/DashPage'
+import login from './pages/LoginPage'
+
+import users from '../fixtures/users.json'
+
+Cypress.Commands.add('adminLogin', () => {
+    const user = users.admin
+
+    login.doLogin(user)
+    dash.userLogedIn(user.name)
+})

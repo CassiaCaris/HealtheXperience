@@ -26,8 +26,12 @@ class LoginPage {
         this.submit()
     }
 
+    popUp(){
+        return cy.get('#swal2-content')
+    }
+
     popUpHave(text) {
-        cy.get('#swal2-content')
+        this.popUp()
             .should('be.visible')
             .should('have.text', text)
     }
