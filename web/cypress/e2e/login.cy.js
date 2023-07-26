@@ -4,7 +4,7 @@ import users from '../fixtures/users.json'
 
 describe('login', () => {
 
-    it.only('deve logar com um perfil do admin', () => {
+    it('deve logar com um perfil do admin', () => {
 
         const user = users.admin
 
