@@ -26,5 +26,44 @@
         "age": "",
         "weight": "",
         "feet_tall": ""
-    }
+    },
+    "minor": {
+        "name": "Bernardo Santos",
+        "email": "bernardo.santos@hotmail.com.br",
+        "age": "15",
+        "weight": "40",
+        "feet_tall": "1.55"
+    },
+    "lower_weights": [
+        {
+            "name": "Layla Maria Soares",
+            "email": "laylaSoares@uol.com.br",
+            "age": "25",
+            "weight": "-40",
+            "feet_tall": "1.55"
+        },
+        {
+            "name": "Adriana Soares",
+            "email": "adrianaSoares@uol.com.br",
+            "age": "42",
+            "weight": "0",
+            "feet_tall": "1.78"
+        }
+    ],
+    "bottom_feet_tall": [
+        {
+            "name": "Saulo Andre Soares",
+            "email": "saulo.andre@uol.com.br",
+            "age": "42",
+            "weight": "78",
+            "feet_tall": "-1.55"
+        },
+        {
+            "name": "Carlos Alexandre Soares",
+            "email": "alexandresoares@uol.com.br",
+            "age": "41",
+            "weight": "78",
+            "feet_tall": "0"
+        }
+    ]
 }
