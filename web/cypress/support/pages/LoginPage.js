@@ -1,6 +1,10 @@
-
+import Popup from './components/Popup'
 
 class LoginPage {
+
+    constructor() {
+        this.Popup = Popup
+    }
 
     go() {
         cy.visit('http://localhost:3000')
@@ -24,20 +28,6 @@ class LoginPage {
         this.go()
         this.fill(user)
         this.submit()
-    }
-
-    popUp(){
-        return cy.get('#swal2-content')
-    }
-
-    popUpHave(text) {
-        this.popUp()
-            .should('be.visible')
-            .should('have.text', text)
-    }
-
-    popUpBack() {
-        cy.get('.swal2-cancel').click()
     }
 
 }

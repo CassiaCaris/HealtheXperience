@@ -50,19 +50,19 @@ $ npx cypress open <br>
 5.2. e peça para executar *_Running Chrome_* <br><br>
 
 **6º Passo** - irá carregar a tela para escolher qual navegador irá executar a automção<br>
-6.1. Deve escolher qual navegador irá usar para a execução dos testes
+6.1. Deve escolher qual navegador irá usar para a execução dos testes  <br>
 
-  ![image](https://user-images.githubusercontent.com/32333336/184724758-60bdeb40-a088-4376-a77f-1c331961a2a6.png)
-6.2. e peça para executar Start E2E Testing in Chrome
+  ![image](https://user-images.githubusercontent.com/32333336/184724758-60bdeb40-a088-4376-a77f-1c331961a2a6.png)  <br>
+6.2. e peça para executar Start E2E Testing in Chrome  <br><br>
 
-**7º Passo** - irá carregar a inicialização da automação
-7.1. Deve escolher qual arquivo deve ser inicializado
+**7º Passo** - irá carregar a inicialização da automação  <br>
+7.1. Deve escolher qual arquivo deve ser inicializado  <br>
 
-  ![image](https://user-images.githubusercontent.com/32333336/184724794-51903da2-b8c5-43e4-99ca-20986cb9af2e.png)
-7.2. Peça para executar login.cy.js
-7.3 onde irá carregar os cenários de login que foram criados.
+  ![image](https://user-images.githubusercontent.com/32333336/184724794-51903da2-b8c5-43e4-99ca-20986cb9af2e.png)  <br>
+7.2. Peça para executar login.cy.js  <br>
+7.3 onde irá carregar os cenários de login que foram criados. <br><br>
 
 
-**Autora**: Cassia Caris
-**Curso**: QAxperience Bootcamp [Bootcamp Dual Experience]
-**Periodo**: 18 de Julho de 2023 a ??
+**Autora**: Cassia Caris <br>
+**Curso**: QAxperience Bootcamp [Bootcamp Dual Experience] <br>
+**Periodo**: 18 de Julho de 2023 a ?? <br>

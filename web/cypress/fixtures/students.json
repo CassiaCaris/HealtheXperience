@@ -5,5 +5,26 @@
         "age": "28",
         "weight": "70",
         "feet_tall": "1.75"
+    },
+    "duplicate": {
+        "name": "Antonio Bandeiras",
+        "email": "antoniobandeiras@yahoo.com",
+        "age": "48",
+        "weight": "75",
+        "feet_tall": "1.85"
+    },
+    "remove": {
+        "name": "Fernando Alvares",
+        "email": "falvaress@hotmail.com",
+        "age": "28",
+        "weight": "85",
+        "feet_tall": "1.63"
+    },
+    "required": {
+        "name": "",
+        "email": "",
+        "age": "",
+        "weight": "",
+        "feet_tall": ""
     }
 }
