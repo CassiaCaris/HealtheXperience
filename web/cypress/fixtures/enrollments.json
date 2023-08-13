@@ -8,5 +8,18 @@
             "feet_tall": "1.75"
         },
         "plan": "Health"
+    },
+    "duplicate": {
+        "student": {
+            "name": "Cassia",
+            "email": "cassia@gmail.com",
+            "age": "32",
+            "weight": "45",
+            "feet_tall": "1.61"
+        },
+        "plan": {
+            "id": 1,
+            "name": "Health"
+        }
     }
 }
