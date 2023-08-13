@@ -30,7 +30,7 @@ class Studentpage {
         cy.contains('tr', email, {timeout: 10000}).find('button').click()
     }
 
-    requiredMessage(label, text) {
+    alertMessage(label, text) {
         cy.contains('label', label).parent().find('span').should('have.text',  text)
     }
 

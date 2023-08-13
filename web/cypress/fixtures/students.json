@@ -27,14 +27,14 @@
         "weight": "",
         "feet_tall": ""
     },
-    "minor": {
+    "inv_age": {
         "name": "Bernardo Santos",
         "email": "bernardo.santos@hotmail.com.br",
         "age": "15",
         "weight": "40",
         "feet_tall": "1.55"
     },
-    "lower_weights": [
+    "inv_weights": [
         {
             "name": "Layla Maria Soares",
             "email": "laylaSoares@uol.com.br",
@@ -50,7 +50,7 @@
             "feet_tall": "1.78"
         }
     ],
-    "bottom_feet_tall": [
+    "inv_feet_tall": [
         {
             "name": "Saulo Andre Soares",
             "email": "saulo.andre@uol.com.br",

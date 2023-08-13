@@ -1,0 +1,12 @@
+{
+    "create": {
+        "student": {
+            "name": "Catarina Ferreira",
+            "email": "catarina@gmail.com",
+            "age": "28",
+            "weight": "70",
+            "feet_tall": "1.75"
+        },
+        "plan": "Health"
+    }
+}
