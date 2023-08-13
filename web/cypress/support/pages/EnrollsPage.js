@@ -29,7 +29,7 @@ class EnrollsPage {
     }
 
     submit() {
-        cy.contains('button', 'Cadastrar')
+        cy.contains('button', 'Cadastrar').click()
     }
 
 

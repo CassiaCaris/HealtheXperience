@@ -35,3 +35,37 @@ Cypress.Commands.add('adminLogin', () => {
     loginPage.doLogin(user)
     studentPage.navbar.userLogedIn(user.name)
 })
+
+Cypress.Commands.add('createEnroll', (dataTest) => { //reduzindo o tempo de execução dos testes
+    cy.task('selectStudentId', dataTest.student.email)
+        .then(result => { //realização do callback
+
+            cy.request({
+                url: 'http://localhost:3333/sessions',
+                method: 'POST',
+                body: { //da para user a mesma variavel que foi criada para import a massa
+                    email: users.admin.email, 
+                    password: users.admin.password
+                }
+            }).then(Response => {
+                cy.log(Response.body.token)
+
+                const payload = { //criado uma cosntate para o payload
+                    student_id: result.success.rows[0].id,
+                    plan_id: dataTest.plan.id,
+                    credit_card: "4242"
+                }
+
+                cy.request({ //realizando a criação da matricula
+                    url: 'http://localhost:3333/enrollments',
+                    method: 'POST',
+                    body: payload,
+                    headers: {
+                        Authorization: 'Bearer ' + Response.body.token
+                    }
+                }).then(Response => { //validação do retorno com sucesso
+                    expect(Response.status).to.eq(201)
+                })
+            })
+        })
+})

@@ -15,7 +15,7 @@ describe('matriculas', () => {
         EnrollsPage.goTo()
 
         EnrollsPage.selectItem('student', dataTest.student.name)
-        EnrollsPage.selectItem('plan', dataTest.plan)
+        EnrollsPage.selectItem('plan', dataTest.plan.name)
 
         EnrollsPage.fillCard(dataTest.student)
 
@@ -24,48 +24,22 @@ describe('matriculas', () => {
         EnrollsPage.popup.haveText('Matrícula cadastrada com sucesso.')
     })
 
-    it.only('não deve criar matricula duplicata', () => {
+    it('não deve criar matricula duplicata', () => {
         const dataTest = data.duplicate
 
         cy.task('resetStudent', dataTest.student)
-        cy.task('selectStudentId', dataTest.student.email)
-            .then(result => { //realização do callback
-  
-                cy.request({
-                    url: 'http://localhost:3333/sessions',
-                    method: 'POST',
-                    body: {
-                        email: "admin@healthxp.com",
-                        password: "xperience"
-                    }
-                }).then(Response=> {
-                    cy.log(Response.body.token)
+        cy.createEnroll(dataTest)
 
-                    const payload = { //criado uma cosntate para o payload
-                        student_id: result.success.rows[0].id,
-                        plan_id: dataTest.plan.id,
-                        credit_card: "4242"
-                    }
+        cy.adminLogin()
 
-                    cy.request({ //realizando a criação da matricula
-                        url: 'http://localhost:3333/enrollments',
-                        method: 'POST',
-                        body: payload,
-                        headers: {
-                            Authorization: 'Bearer ' + Response.body.token
-                        }
-                    }).then(Response=> {
-                        expect(Response.status).to.eq(201)
-                    })
-                })
+        EnrollsPage.Navbar.goToEntolls()
+        EnrollsPage.goTo()
+        EnrollsPage.selectItem('student', dataTest.student.name)
+        EnrollsPage.selectItem('plan', dataTest.plan.name)
+        EnrollsPage.fillCard(dataTest.student)
+        EnrollsPage.submit()
 
-
-            })
-
-
-
-
-
+        EnrollsPage.popup.haveText('O aluno já possui matrícula cadastrada!')
     })
 
 })
